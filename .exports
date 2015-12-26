@@ -6,3 +6,9 @@ export PATH="$HOME/.rbenv/shims:$PATH"
 
 ## Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+## Place where you save history
+export HISTFILE=${HOME}/.zsh_history
+
+## maximum number of history saved in memory
+export HISTSIZE=1000

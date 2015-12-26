@@ -1,14 +1,19 @@
 source ~/.dotfiles/.zshrc.antigen
 source ~/.dotfiles/.exports
 source ~/.dotfiles/.aliases
+source ~/.dotfiles/.keybinds
 
 # zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+# Basic zsh settings
 ## Prohibit logging out with ^D
 setopt ignoreeof
 
-# rbenvの環境設定
+## Prohibit saving duplicate histories
+setopt hist_ignore_dups
+
+# rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 function gem(){
