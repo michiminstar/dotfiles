@@ -1,0 +1,8 @@
+# User configuration
+export PATH="/Users/michimin/.rbenv/shims:/Users/michimin/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+## rbenv
+export PATH="$HOME/.rbenv/shims:$PATH"
+
+## Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

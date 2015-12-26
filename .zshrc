@@ -1,17 +1,12 @@
 source ~/.dotfiles/.zshrc.antigen
+source ~/.dotfiles/.exports
 source ~/.dotfiles/.aliases
 
 # zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-# User configuration
-export PATH="/Users/michimin/.rbenv/shims:/Users/michimin/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
-
-## rbenv
-export PATH="$HOME/.rbenv/shims:$PATH"
-
-## Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+## Prohibit logging out with ^D
+setopt ignoreeof
 
 # rbenvの環境設定
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -31,6 +26,3 @@ function bundle(){
     rbenv rehash
   fi
 }
-
-## Prohibit logging out with ^D
-setopt ignoreeof
