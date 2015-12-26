@@ -1,15 +1,10 @@
-# Path to your oh-my-zsh installation.
-export ZSH=/Users/michimin/.oh-my-zsh
+source ~/.dotfiles/.zshrc.antigen
 
 # zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 ## Prohibit logging out with ^D
 setopt ignoreeof
-
-# Set name of the theme to load.
-# ZSH_THEME="muse"
-ZSH_THEME="wezm"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -19,12 +14,6 @@ ZSH_THEME="wezm"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -45,20 +34,12 @@ ZSH_THEME="wezm"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git sublime)
-plugins=(git gitfast)
+plugins=(git sublime gitfast)
+# plugins=(git gitfast)
 
 # User configuration
 export PATH="/Users/michimin/.rbenv/shims:/Users/michimin/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
-# export MANPATH="/usr/local/man:$MANPATH"
-
-source $ZSH/oh-my-zsh.sh
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -66,9 +47,6 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
@@ -97,7 +75,6 @@ alias ria='rails runner LessonData.import_all'
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 # rbenvの環境設定
-
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 function gem(){
