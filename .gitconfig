@@ -1,6 +1,6 @@
 [core]
     pager = less -q -R
-    excludesfile = ~/.gitignore
+    excludesfile = /Users/michimin/.gitignore_global
     preloadindex = true
     editor = subl -n -w
     mergeoptions = --no-edit
@@ -35,12 +35,12 @@
     algorithm = histogram
 
 [difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path = 
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
 
 [mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
 
 [ghq]
     root = ~/src
