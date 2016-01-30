@@ -2,7 +2,7 @@
 alias c='clear'
 
 # Sublime Text alias
-alias st='subl'
+alias st='reattach-to-user-namespace subl'
 
 # git alias
 alias gd='git diff'
