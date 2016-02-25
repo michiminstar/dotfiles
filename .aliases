@@ -4,6 +4,9 @@ alias c='clear'
 # Sublime Text alias
 alias st='reattach-to-user-namespace subl'
 
+# Atom alias
+alias atm='reattach-to-user-namespace atom'
+
 # git alias
 alias gd='git diff'
 alias gbd='git branch -D'
