@@ -13,6 +13,11 @@ setopt ignoreeof
 ## Prohibit saving duplicate histories
 setopt hist_ignore_dups
 
+# automatic tmux start
+if [ -z $TMUX ]; then
+  tmux -2
+fi
+
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
