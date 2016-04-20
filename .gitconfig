@@ -12,6 +12,9 @@
 [alias]
     t  = typechange
     graph = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
+    ## Update the master branch to the latest and delete the old one.
+    sync = !git checkout staging && git pull origin staging && git fetch -p origin && git branch -d $(git branch --merged | grep -v staging | grep -v '*')
+    logg = log --stat --decorate=short --pretty=format:'%C(yellow)%h %Cgreen%cr %Cblue%cn%Cred%d %Creset%s %C(cyan)%b'
 
 [help]
     autocorrect = 1
@@ -20,7 +23,7 @@
     # Use the Git 1.x.x default to avoid errors on machines with old Git
     # installations. To use `simple` instead, add this to your `~/.extra` file:
     # `git config --global push.default simple`. See http://git.io/mMah-w.
-    default = matching
+    default = current
 
 [user]
   name = Michi Kanda
@@ -37,7 +40,7 @@
 
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"

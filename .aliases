@@ -5,7 +5,7 @@ alias c='clear'
 alias st='reattach-to-user-namespace subl'
 
 # Atom alias
-alias atm='reattach-to-user-namespace atom'
+alias at='reattach-to-user-namespace atom'
 
 # git alias
 alias gd='git diff'
@@ -13,8 +13,9 @@ alias gbd='git branch -D'
 alias gcam='git commit -am'
 
 # git alias for staging branch
-alias gcs='git checkout staging'
-alias gspull='git pull origin staging'
+#alias gcs='git checkout staging'
+#alias gspull='git pull origin staging'
+alias gcs='git checkout staging && git pull origin staging && git fetch -p origin'
 alias gps='git pull-request -b staging -m'
 
 # tree structure
