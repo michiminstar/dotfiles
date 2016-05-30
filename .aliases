@@ -13,8 +13,7 @@ alias gbd='git branch -D'
 alias gcam='git commit -am'
 
 # git alias for staging branch
-#alias gcs='git checkout staging'
-#alias gspull='git pull origin staging'
+alias gspull='git pull origin staging'
 alias gcs='git checkout staging && git pull origin staging && git fetch -p origin'
 alias gps='git pull-request -b staging -m'
 
