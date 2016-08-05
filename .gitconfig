@@ -37,6 +37,7 @@
 [diff]
     tool      = vimdiff
     algorithm = histogram
+	compactionHeuristic = true
 
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
