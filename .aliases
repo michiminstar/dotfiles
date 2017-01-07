@@ -22,4 +22,7 @@ alias gps='git pull-request -b staging -m'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 # progate csv alias
-alias ria='rails runner LessonData.import_all'
+alias ria='rails runner Tasks::LessonData.import_all'
+
+# temporary disable pyenv path while running brew doctor
+alias brew="env PATH=${PATH/\/Users\/michimin\/\.pyenv\/shims:/} brew"
