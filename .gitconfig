@@ -2,7 +2,6 @@
     pager = less -q -R
     excludesfile = /Users/michimin/.gitignore_global
     preloadindex = true
-    # editor = subl -n -w
     editor = atom --wait
     mergeoptions = --no-edit
 
