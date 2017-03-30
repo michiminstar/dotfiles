@@ -27,3 +27,8 @@ export HISTFILE=${HOME}/.zsh_history
 
 ## maximum number of history saved in memory
 export HISTSIZE=1000
+
+export HISTCONTROL="ignoredups"
+
+## locale
+export LC_CTYPE=en_US.UTF-8
