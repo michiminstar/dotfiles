@@ -1,13 +1,19 @@
-# UNIX alias
+# ------------------------------------
+# Terminal alias
+# ------------------------------------
 alias c='clear'
 
-# Sublime Text alias
-alias st='reattach-to-user-namespace subl'
+# tree structure
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
-# Atom alias
+# ------------------------------------
+# Atom
+# ------------------------------------
 alias at='reattach-to-user-namespace atom'
 
-# git alias
+# ------------------------------------
+# Git alias
+# ------------------------------------
 alias gd='git diff'
 alias gbd='git branch -D'
 alias gcam='git commit -am'
@@ -18,11 +24,57 @@ alias gspull='git pull origin staging'
 alias gcs='git checkout staging && git pull origin staging && git fetch -p origin'
 alias gps='git pull-request -b staging -m'
 
-# tree structure
-alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
-
 # progate csv alias
 alias ria='rails runner Tasks::LessonData.import_all'
 
 # temporary disable pyenv path while running brew doctor
 alias brew="env PATH=${PATH/\/Users\/michimin\/\.pyenv\/shims:/} brew"
+
+# ------------------------------------
+# Docker alias and function
+# ------------------------------------
+
+# Get latest container ID
+alias dl="docker ps -l -q"
+
+# Get container process
+alias dps="docker ps"
+
+# Get process included stop container
+alias dpa="docker ps -a"
+
+# Get images
+alias di="docker images"
+
+# Get container IP
+alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+
+# Run deamonized container, e.g., $dkd base /bin/echo hello
+alias dkd="docker run -d -P"
+
+# Run interactive container, e.g., $dki base /bin/bash
+alias dki="docker run -i -t -P"
+
+# Execute interactive container, e.g., $dex base /bin/bash
+alias dex="docker exec -i -t"
+
+# Stop all containers
+dstop() { docker stop $(docker ps -a -q); }
+
+# Remove all containers
+drm() { docker rm $(docker ps -a -q); }
+
+# Stop and Remove all containers
+alias drmf='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
+
+# Remove all images
+dri() { docker rmi $(docker images -q); }
+
+# Dockerfile build, e.g., $dbu tcnksm/test
+dbu() { docker build -t=$1 .; }
+
+# Show all alias related docker
+dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
+
+# Bash into running container
+dbash() { docker exec -it $(docker ps -aqf "name=$1") bash; }
