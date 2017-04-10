@@ -1,11 +1,3 @@
-source ~/.dotfiles/.zshrc.antigen
-source ~/.dotfiles/.exports
-source ~/.dotfiles/.aliases
-source ~/.dotfiles/.keybinds
-
-# zsh-completions
-fpath=(/usr/local/share/zsh-completions $fpath)
-
 # Basic zsh settings
 ## Prohibit logging out with ^D
 setopt ignoreeof
@@ -13,10 +5,16 @@ setopt ignoreeof
 ## Prohibit saving duplicate histories
 setopt hist_ignore_dups
 
-# automatic tmux start
+source ~/.dotfiles/.exports
+source ~/.dotfiles/.aliases
+source ~/.dotfiles/.keybinds
+
+# Automatic tmux start
 if [ -z $TMUX ]; then
   tmux -2
 fi
+
+source ~/.dotfiles/.zshrc.zplug
 
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
