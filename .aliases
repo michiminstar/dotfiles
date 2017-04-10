@@ -7,6 +7,11 @@ alias c='clear'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 # ------------------------------------
+# Atom alias
+# ------------------------------------
+alias at='reattach-to-user-namespace atom'
+
+# ------------------------------------
 # Git alias
 # ------------------------------------
 alias gd='git diff'
