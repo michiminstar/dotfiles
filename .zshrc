@@ -2,12 +2,17 @@
 ## Prohibit logging out with ^D
 setopt ignoreeof
 
-## Prohibit saving duplicate histories
 setopt hist_ignore_dups
+setopt share_history
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_find_no_dups
+setopt hist_no_store
 
 source ~/.dotfiles/.exports
 source ~/.dotfiles/.aliases
 source ~/.dotfiles/.keybinds
+source ~/.dotfiles/.zshenv
 
 # Automatic tmux start
 if [ -z $TMUX ]; then
