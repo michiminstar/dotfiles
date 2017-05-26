@@ -9,6 +9,7 @@ setopt hist_ignore_all_dups
 setopt hist_find_no_dups
 setopt hist_no_store
 
+source ~/.dotfiles/.zshrc.zplug
 source ~/.dotfiles/.exports
 source ~/.dotfiles/.aliases
 source ~/.dotfiles/.keybinds
@@ -18,8 +19,6 @@ source ~/.dotfiles/.zshenv
 if [ -z $TMUX ]; then
   tmux -2
 fi
-
-source ~/.dotfiles/.zshrc.zplug
 
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

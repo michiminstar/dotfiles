@@ -1,6 +1,6 @@
 [core]
     pager = less -q -R
-    excludesfile = /Users/michimin/.gitignore_global
+    excludesfile = /Users/michiminstar/.gitignore_global
     preloadindex = true
     editor = atom --wait
     mergeoptions = --no-edit
@@ -40,7 +40,7 @@
 
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
