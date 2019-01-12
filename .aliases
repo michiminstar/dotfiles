@@ -14,6 +14,7 @@ alias at='reattach-to-user-namespace atom'
 # ------------------------------------
 # Git alias
 # ------------------------------------
+alias git='LC_ALL=en_GB git'
 alias gd='git diff'
 alias gbd='git branch -D'
 alias gcam='git commit -am'
