@@ -32,6 +32,12 @@ alias ria='rails runner Tasks::LessonData.import_all'
 # temporary disable pyenv path while running brew doctor
 alias brew="env PATH=${PATH/\/Users\/michimin\/\.pyenv\/shims:/} brew"
 
+
+# ------------------------------------
+# Jupyter notebook alias
+# ------------------------------------
+alias jp='jupyter notebook'
+
 # ------------------------------------
 # Docker alias and function
 # ------------------------------------

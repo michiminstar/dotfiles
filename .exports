@@ -37,3 +37,13 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 ## mysql
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
+##
+export PATH="$HOME/usr/local/Cellar/mongodb-community-shell/4.2.0/bin:$PATH"
+
+# .NET SDK
+export PATH="${PATH}:/usr/local/share/dotnet"
+# system-wide environment settings for zsh(1)
+if [ -x /usr/libexec/path_helper ]; then
+    eval `/usr/libexec/path_helper -s`
+fi
